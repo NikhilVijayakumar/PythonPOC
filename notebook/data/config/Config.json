@@ -1,0 +1,17 @@
+{
+    "sqlite": {
+        "statistics": {
+            "create_statistics": "CREATE TABLE IF NOT EXISTS Statistics (id INTEGER PRIMARY KEY, open_time DATETIME NOT NULL, symbol TEXT NOT NULL, algorithm TEXT NOT NULL, count INTEGER, type TEXT NOT NULL, current REAL(15,5), reward REAL(15,5), risk REAL(15,5), close REAL(15,5), status TEXT NOT NULL, close_time DATETIME)",
+            "insert_statistics": "INSERT INTO Statistics(open_time, symbol, algorithm, count, type, current, reward, risk, close, status, close_time) VALUES (?,?,?,?,?,?,?,?,?,?,?)",
+            "name": "E://Workspace//Python//Trading//src//configuration//config//statistics.db",
+            "update_statistics": "UPDATE Statistics  SET status = ? , close_time = ? WHERE symbol = ? AND algorithm = ? AND status = 'open' "
+        },
+        "tick": {
+            "create_ticker": "CREATE TABLE IF NOT EXISTS Ticker (id INTEGER PRIMARY KEY,symbol TEXT NOT NULL UNIQUE, token INTEGER)",
+            "create_token": "CREATE TABLE IF NOT EXISTS TOKEN_{} (id INTEGER PRIMARY KEY,ts DATETIME NOT NULL UNIQUE,price REAL(15,5), volume INTEGER)",
+            "insert_ticker": "INSERT INTO Ticker(symbol,token) VALUES (?,?)",
+            "insert_token": "INSERT INTO TOKEN_{}(ts,price,volume) VALUES (?,?,?)",
+            "name": "E://Workspace//Python//Trading//src//configuration//config//ticks.db"
+        }
+    }
+}
