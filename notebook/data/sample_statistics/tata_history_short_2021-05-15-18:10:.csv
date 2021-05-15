@@ -1,0 +1,4 @@
+open_time,symbol,count,type,current,reward,risk,close,status,close_time
+2021-05-15-18:10:21,tata,1,short,318.45,316.45,319.45,316.3,profit,2021-05-15-18:10:21
+2021-05-15-18:10:21,tata,1,short,313.6,311.6,314.6,315.1,loss,2021-05-15-18:10:21
+2021-05-15-18:10:22,tata,1,short,318.0,316.0,319.0,315.75,profit,2021-05-15-18:10:22
