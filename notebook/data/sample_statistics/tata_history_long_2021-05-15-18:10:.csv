@@ -1,5 +1,0 @@
-open_time,symbol,algorithm,count,type,current,reward,risk,close,status,close_time
-2021-05-15-18:10:21,tata,MULTIPLE_MOM,1,long,321.35,323.35,320.35,319.85,loss,2021-05-15-18:10:21
-2021-05-15-18:10:21,tata,MULTIPLE_MOM,1,long,315.5,317.5,314.5,314.5,loss,2021-05-15-18:10:21
-2021-05-15-18:10:22,tata,MULTIPLE_MOM,1,long,315.45,317.45,314.45,317.7,profit,2021-05-15-18:10:22
-2021-05-15-18:10:22,tata,MULTIPLE_MOM,1,long,313.7,315.7,312.7,315.8,profit,2021-05-15-18:10:22
