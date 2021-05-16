@@ -5,14 +5,14 @@
             "insert_statistics": "INSERT INTO Statistics(open_time, symbol, algorithm, count, type, current, reward, risk, close, status, close_time) VALUES (?,?,?,?,?,?,?,?,?,?,?)",
 
             "update_statistics": "UPDATE Statistics  SET status = ?, close =? , close_time = ? WHERE symbol = ? AND algorithm = ? AND type=? AND status = 'open' ",
-               "name": "E://Workspace//Python//Trading//src//configuration//config//statistics.db"
+               "name": "config//statistics.db"
         },
         "tick": {
             "create_ticker": "CREATE TABLE IF NOT EXISTS Ticker (id INTEGER PRIMARY KEY,symbol TEXT NOT NULL UNIQUE, token INTEGER)",
             "create_token": "CREATE TABLE IF NOT EXISTS TOKEN_{} (id INTEGER PRIMARY KEY,ts DATETIME NOT NULL UNIQUE,price REAL(15,5), volume INTEGER)",
             "insert_ticker": "INSERT INTO Ticker(symbol,token) VALUES (?,?)",
             "insert_token": "INSERT INTO TOKEN_{}(ts,price,volume) VALUES (?,?,?)",
-            "name": "E://Workspace//Python//Trading//src//configuration//config//ticks.db"
+            "name": "config//ticks.db"
         }
     }
 }
