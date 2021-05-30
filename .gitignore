@@ -163,3 +163,6 @@ dmypy.json
 
 # mpeltonen/sbt-idea plugin
 .idea_modules/
+/notebook/data/last_60/17_05_2021/days/
+/notebook/data/last_year/17_05_2021/days/
+/notebook/RegressionDataAnalysis.ipynb
