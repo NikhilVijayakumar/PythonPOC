@@ -166,3 +166,5 @@ dmypy.json
 /notebook/data/last_60/17_05_2021/days/
 /notebook/data/last_year/17_05_2021/days/
 /notebook/RegressionDataAnalysis.ipynb
+/notebook/data/test_data/
+/notebook/data/db/
