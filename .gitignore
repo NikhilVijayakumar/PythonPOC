@@ -168,3 +168,6 @@ dmypy.json
 /notebook/RegressionDataAnalysis.ipynb
 /notebook/data/test_data/
 /notebook/data/db/
+/notebook/data/last_60/17_05_2021/current_data/
+/notebook/data/last_60/17_05_2021/final_data/
+/notebook/test.py

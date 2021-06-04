@@ -43,4 +43,4 @@ SELECT close_time,current,close,number_of_shares,symbol,type,sum(case when  stat
        round(sum(case when  status = 'loss' then 1.0 else 0.0 end)/count(*),2) as loss_ratio,
        round(sum(case when status = 'profit' then 1.0 else 0.0 end)/count(*),2)  as profit_ratio,
 	   round(sum(close*number_of_shares -current*number_of_shares ),2)  as returns
-FROM Statistics GROUP by symbol,close_time having close_time = '2021-05-09-11:44:13' ORDER by returns
+FROM Statistics GROUP by symbol,close_time having close_time = '2021-04-30-18:58:55' ORDER by returns
