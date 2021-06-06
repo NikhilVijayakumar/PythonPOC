@@ -5,7 +5,7 @@ SELECT close_time, sum(case when  status = 'loss' then 1 else 0 end) as loss,
        round(sum(case when  status = 'loss' then 1.0 else 0.0 end)/count(*),2) as loss_ratio,
        round(sum(case when status = 'profit' then 1.0 else 0.0 end)/count(*),2)  as profit_ratio,
 	   round(sum(close*number_of_shares -current*number_of_shares ),2)  as returns
-FROM Statistics GROUP by close_time ORDER by returns
+FROM Statistics GROUP by close_time ORDER by close_time
 
 
 #Based on algorithm
