@@ -1,0 +1,36 @@
+{
+
+    "sqlite": {
+        "kite": {
+            "create_order_history": "CREATE TABLE IF NOT EXISTS OrderHistory  (id INTEGER PRIMARY KEY,  placed_by TEXT NOT NULL,  order_id TEXT NOT NULL,  parent_order_id TEXT ,  status TEXT NOT NULL,  status_message TEXT ,  status_message_raw TEXT ,  order_timestamp DATETIME NOT NULL,  variety TEXT NOT NULL,  tradingsymbol TEXT NOT NULL,  order_type TEXT NOT NULL, transaction_type TEXT NOT NULL, validity TEXT NOT NULL,  product TEXT NOT NULL,  quantity INTEGER NOT NULL,  trigger_price  REAL(15,5) NOT NULL,  average_price  REAL(15,5) NOT NULL,  filled_quantity INTEGER NOT NULL,  pending_quantity INTEGER NOT NULL,  cancelled_quantity INTEGER NOT NULL)",
+            "insert_order": "INSERT INTO OrderHistory(placed_by, order_id, parent_order_id, status, status_message, status_message_raw, order_timestamp, variety, tradingsymbol, order_type,transaction_type, validity,product,quantity,trigger_price,average_price,filled_quantity,pending_quantity,cancelled_quantity) VALUES (?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)",
+            "name": "config//kite.db"
+        },
+        "mock": {
+            "create_token": "CREATE TABLE IF NOT EXISTS TOKEN_{} (id INTEGER PRIMARY KEY,open REAL(15,5),high REAL(15,5),low REAL(15,5),close REAL(15,5), volume INTEGER)",
+            "insert_token": "INSERT INTO TOKEN_{}(open,high,low,close,volume) VALUES (?,?,?,?,?)",
+            "last_60_name": "config//mock_last_60.db",
+            "last_year_name": "config//mock_last_year.db"
+        },
+        "statistics": {
+            "create_statistics": "CREATE TABLE IF NOT EXISTS Statistics (id INTEGER PRIMARY KEY, open_time DATETIME NOT NULL, symbol TEXT NOT NULL, algorithm TEXT NOT NULL, number_of_shares INTEGER, type TEXT NOT NULL, current REAL(15,5), reward REAL(15,5), risk REAL(15,5), close REAL(15,5), status TEXT NOT NULL, close_time DATETIME)",
+            "insert_statistics": "INSERT INTO Statistics(open_time, symbol, algorithm, number_of_shares, type, current, reward, risk, close, status, close_time) VALUES (?,?,?,?,?,?,?,?,?,?,?)",
+            "name": "config//statistics.db",
+            "update_statistics": "UPDATE Statistics  SET status = ?, close =? , close_time = ? WHERE symbol = ? AND algorithm = ? AND type=? AND status = 'open' "
+        },
+        "tick": {
+            "create_ticker": "CREATE TABLE IF NOT EXISTS Ticker (id INTEGER PRIMARY KEY,symbol TEXT NOT NULL UNIQUE, token INTEGER)",
+            "create_token": "CREATE TABLE IF NOT EXISTS TOKEN_{} (id INTEGER PRIMARY KEY,ts DATETIME NOT NULL UNIQUE,price REAL(15,5), volume INTEGER)",
+            "insert_ticker": "INSERT INTO Ticker(symbol,token) VALUES (?,?)",
+            "insert_token": "INSERT INTO TOKEN_{}(ts,price,volume) VALUES (?,?,?)",
+            "name": "config//ticks.db",
+            "NIFTY_AUTO": "config//NIFTY_AUTO.db",
+            "NIFTY_FMCG": "config//NIFTY_FMCG.db",
+            "NIFTY_PVT_BANK": "config//NIFTY_PVT_BANK.db",
+            "NIFTY_PSU_BANK": "config//NIFTY_PSU_BANK.db",
+            "NIFTY_INFRA": "config//NIFTY_INFRA.db"
+        }
+
+    }
+
+}
